@@ -1,7 +1,7 @@
 name: Metrics
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  # Schedule updates (daily)
+  schedule: [{cron: "0 0/24 * * *"}]
   # Lines below let you run workflow manually and on each commit (optional)
   workflow_dispatch:
   push: {branches: ["main"]}
@@ -17,11 +17,12 @@ jobs:
           token: ${{ secrets.METRICS_SECRET }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: mlpeter33
-          base: achievements
+          template: classic
+          base: ""
           plugin_achievements: yes
           plugin_achievements_threshold: B      # Display achievements with rank B or higher
           plugin_achievements_secrets: yes      # Display unlocked secrets achievements
-          plugin_achievements_display: compact  # Use compact display
+          plugin_achievements_display: detailed # display type
           plugin_achievements_limit: 0          # yep
 
   github-metrics:
