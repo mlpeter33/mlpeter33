@@ -18,8 +18,5 @@
 </a>
 
 <a href="https://github.com/mlpeter33">
-  <img align="center" width="49%" src="./github-habits.svg" />
-</a>
-<a href="https://github.com/mlpeter33">
     <img align="center" width="49%" src="./achievements.svg" />
 </a>
